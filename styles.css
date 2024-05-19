@@ -36,6 +36,7 @@ body {
     position: relative;
     overflow: hidden;
     transition: color 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .btn::before, .contact-btn::before {
@@ -48,15 +49,12 @@ body {
     background: #ff00ff;
     transition: all 0.4s ease-in-out;
     transform: translate(-50%, -50%) rotate(45deg);
+    z-index: 0;
 }
 
 .btn:hover::before, .contact-btn:hover::before {
     width: 0;
     height: 0;
-}
-
-.btn:hover, .contact-btn:hover {
-    color: black;
 }
 
 .btn, .contact-btn {
@@ -69,4 +67,9 @@ body {
 
 .contact-btn::before {
     background: #ff69b4;
+}
+
+audio {
+    margin-top: 20px;
+    width: 300px;
 }
