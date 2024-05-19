@@ -4,9 +4,10 @@ body {
     background-color: #000;
     font-family: 'Arial', sans-serif;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     color: #fff;
 }
 
@@ -31,45 +32,66 @@ body {
     color: #fff;
     text-decoration: none;
     border: 2px solid #ff00ff;
-    border-radius: 5px;
-    background: black;
+    border-radius: 50px;
+    background: linear-gradient(145deg, #ff00ff, #ff69b4);
+    box-shadow: 0 5px 15px rgba(255, 0, 255, 0.3);
     position: relative;
     overflow: hidden;
-    transition: color 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
     cursor: pointer;
 }
 
-.btn::before, .contact-btn::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 300%;
-    height: 300%;
-    background: #ff00ff;
-    transition: all 0.4s ease-in-out;
-    transform: translate(-50%, -50%) rotate(45deg);
-    z-index: 0;
-}
-
-.btn:hover::before, .contact-btn:hover::before {
-    width: 0;
-    height: 0;
-}
-
-.btn, .contact-btn {
-    z-index: 1;
+.btn:hover, .contact-btn:hover {
+    transform: scale(1.05);
 }
 
 .contact-btn {
     padding: 15px 40px;
 }
 
-.contact-btn::before {
-    background: #ff69b4;
+.player-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ipad {
+    width: 400px;
+    height: 600px;
+    background: #fff;
+    border-radius: 40px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.ipad::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    width: 60px;
+    height: 5px;
+    background: #333;
+    border-radius: 10px;
+    transform: translateX(-50%);
+}
+
+.ipad::after {
+    content: '';
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    background: #333;
+    border-radius: 50%;
+    transform: translateX(-50%);
 }
 
 audio {
-    margin-top: 20px;
-    width: 300px;
+    width: 100%;
+    margin-top: 50px;
 }
