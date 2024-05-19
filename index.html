@@ -10,11 +10,13 @@
     <div class="container">
         <img src="logo.png" alt="Reeves Radio Logo" class="logo">
         <div class="buttons">
-            <a href="https://stream.zeno.fm/nkf773hdckcuv" class="btn" target="_blank">Jazz Radio</a>
-            <a href="https://stream.zeno.fm/0bh9rqwjvgutv" class="btn" target="_blank">Mainstream Radio</a>
-            <a href="https://stream.zeno.fm/bp7xwuadlo1vv" class="btn" target="_blank">Old but Gold Radio</a>
+            <button class="btn" data-stream="https://stream.zeno.fm/nkf773hdckcuv">Jazz Radio</button>
+            <button class="btn" data-stream="https://stream.zeno.fm/0bh9rqwjvgutv">Mainstream Radio</button>
+            <button class="btn" data-stream="https://stream.zeno.fm/bp7xwuadlo1vv">Old but Gold Radio</button>
         </div>
+        <audio id="player" controls hidden></audio>
         <a href="https://discord.gg/ve2k6z6fHE" class="contact-btn" target="_blank">Contact Us</a>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
